@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Matching Game</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="Script.js" async></script>
+</head>
+
+<body>
+
+   <h1 class="page-title">MEMORY MATCHING GAME</h1> <!-- This line is simple just the title of the game -->
+
+   <div class="overlay-text visible">                                <!-- From line 15 - line 25, is the overlay texts thattells the user when to click the button to start the game, tell them if they have won, lost or to restart. -->
+       Click to start
+   </div>
+   <div id="game-over-text" class="overlay-text">
+        GAME OVER
+        <span class="overlay-text-small">Click to Restart</span>
+    </div>
+    <div id="victory-text" class="overlay-text">
+        VICTORY
+        <span class="overlay-text-small">Click to Restart</span>
+    </div>
+
+    <div class="game-container">                                 <!-- from line 27 - line 35 The game container is the information that icnludes the timing and move counts of the game which is held in a container and under other containers -->
+        <div class="game-info-container">
+            <div class="game-info">
+                Time: <span id="time-remaining">100</span>
+            </div>
+            <div class="game-info">
+                Moves: <span id="move-count">0</span>
+            </div>
+        </div>
+
+        <div class="card">                                    <!-- from line 37 - line 179 is all the sepearate cards in the game which hold the information about the images, names and classes used -->
+            <div class="card-back card-face">
+                <img class="question-mark question-mark-center" src="Assets/question.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Assets/triangle.png">
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="question-mark question-mark-center" src="Assets/question.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Assets/Star.png">
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="question-mark question-mark-center" src="Assets/question.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Assets/Square.png">
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="question-mark question-mark-center" src="Assets/question.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Assets/Rectangle.png">
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="question-mark question-mark-center" src="Assets/question.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Assets/pentagon.png">
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="question-mark question-mark-center" src="Assets/question.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Assets/paralellogram.png">
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="question-mark question-mark-center" src="Assets/question.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Assets/Hexagon.png">
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="question-mark question-mark-center" src="Assets/question.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Assets/Circle.png">
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="question-mark question-mark-center" src="Assets/question.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Assets/triangle.png">
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="question-mark question-mark-center" src="Assets/question.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Assets/Star.png">
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="question-mark question-mark-center" src="Assets/question.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Assets/Square.png">
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="question-mark question-mark-center" src="Assets/question.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Assets/Rectangle.png">
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="question-mark question-mark-center" src="Assets/question.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Assets/pentagon.png">
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="question-mark question-mark-center" src="Assets/question.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Assets/paralellogram.png">
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="question-mark question-mark-center" src="Assets/question.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Assets/Hexagon.png">
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="question-mark question-mark-center" src="Assets/question.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Assets/Circle.png">
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
